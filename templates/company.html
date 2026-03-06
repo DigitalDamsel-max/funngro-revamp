@@ -1,0 +1,317 @@
+{% extends "base.html" %}
+{% block title %}Hire Teen Talent for Micro-Tasks | Funngro for Companies{% endblock %}
+{% block meta_desc %}Funngro helps companies complete digital micro-tasks fast by tapping into a verified pool of skilled, motivated teens. Post a task, get results.{% endblock %}
+{% block meta_keywords %}hire teens for tasks, micro-task platform for business, affordable digital talent, teen freelancers, company task outsourcing{% endblock %}
+{% block og_title %}Funngro for Companies — Smart Tasks, Real Results{% endblock %}
+{% block og_desc %}Post micro-tasks and get quality work from talented teens.{% endblock %}
+{% block og_url %}/company{% endblock %}
+{% block nav_company %}active{% endblock %}
+
+{% block content %}
+
+<!-- ══ HERO ══ -->
+<section class="co-hero" aria-label="Company hero">
+  <div class="co-hero-bg">
+    <div class="co-blob co-blob-1"></div>
+    <div class="co-blob co-blob-2"></div>
+    <div class="co-grid-overlay"></div>
+  </div>
+  <div class="container co-hero-inner">
+    <div class="co-hero-text">
+      <!-- <div class="chip chip-green" data-reveal>🏢 For Companies</div> -->
+      <h1 data-reveal data-delay="80">
+        Get real work done<br/>by <em class="em-green">teen talent</em>
+      </h1>
+      <p data-reveal data-delay="160" style="font-size:1.08rem;max-width:480px;color:var(--text-body)">
+        Post micro-tasks to a pre-vetted pool of ambitious teens. Faster than hiring. Cheaper than agencies. Surprisingly good.
+      </p>
+      <div class="hero-btns" data-reveal data-delay="240">
+        <a href="#how-it-works" class="btn btn-ghost btn-lg">See How It Works</a>
+        <a href="#contact-section" class="btn btn-primary btn-lg">Post a Task Free →</a>
+      </div>
+      <div class="hero-trust" data-reveal data-delay="320">
+        <span class="trust-pill">✓ No credit card</span>
+        <span class="trust-pill">✓ Pay on approval</span>
+        <span class="trust-pill">✓ Verified profiles</span>
+      </div>
+    </div>
+
+    <div class="co-hero-card" data-reveal data-delay="160">
+      <div class="demo-card">
+        <div class="demo-card-top">
+          <div class="demo-av">A</div>
+          <div class="demo-meta">
+            <div class="demo-name">Ananya R.</div>
+            <div class="demo-sub">Social Media · 16 yrs</div>
+          </div>
+          <span class="chip chip-green" style="margin-left:auto;font-size:0.65rem">Active</span>
+        </div>
+        <div style="margin-bottom:4px;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted)">Current Task</div>
+        <div style="font-family:var(--font-display);font-weight:700;color:var(--white);font-size:0.95rem;margin-bottom:12px">Instagram Caption Pack (10 posts)</div>
+        <div class="demo-progress-track"><div class="demo-progress-fill" style="width:70%"></div></div>
+        <div style="font-size:0.72rem;color:var(--text-muted);margin-top:5px">7 of 10 done · Due in 2h</div>
+        <div class="demo-stats">
+          <span>⭐ 4.9</span><span>✅ 42 tasks</span><span>⚡ Fast</span>
+        </div>
+      </div>
+      <div class="demo-float-card">
+        <span style="font-size:1.3rem">🎯</span>
+        <div>
+          <div style="font-weight:700;font-size:0.82rem;color:var(--white)">Task matched!</div>
+          <div style="font-size:0.72rem;color:var(--text-muted)">3 teens applied in 12 min</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ STATS ══ -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-block" data-reveal>
+        <div class="stat-num">{{ stats.teens }}</div>
+        <div class="stat-lbl">Verified teen profiles</div>
+      </div>
+      <div class="stat-block" data-reveal data-delay="80">
+        <div class="stat-num">{{ stats.completion_rate }}</div>
+        <div class="stat-lbl">Task completion rate</div>
+      </div>
+      <div class="stat-block" data-reveal data-delay="160">
+        <div class="stat-num">{{ stats.avg_first_submission }}</div>
+        <div class="stat-lbl">Avg first submission</div>
+      </div>
+      <div class="stat-block" data-reveal data-delay="240">
+        <div class="stat-num">{{ stats.cheaper_than_agencies }}</div>
+        <div class="stat-lbl">Cheaper than agencies</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ HOW IT WORKS ══ -->
+<section class="section" id="how-it-works">
+  <div class="container">
+    <div class="sec-hdr" data-reveal>
+      <div class="eyebrow">How it works</div>
+      <h2>From brief to done<br/>in three steps</h2>
+    </div>
+    <div class="three-grid">
+      <div class="step-card" data-reveal data-delay="0">
+        <div class="step-num">01</div>
+        <div class="card-icon">📋</div>
+        <h3>Post your task</h3>
+        <p>Describe what you need — blog posts, spreadsheets, social captions, data entry. Takes 2 minutes.</p>
+      </div>
+      <div class="step-card" data-reveal data-delay="120">
+        <div class="step-num">02</div>
+        <div class="card-icon">🔍</div>
+        <h3>Review matched teens</h3>
+        <p>Our algorithm surfaces the best-fit teens. Review profiles, ratings, and previous work samples.</p>
+      </div>
+      <div class="step-card" data-reveal data-delay="240">
+        <div class="step-num">03</div>
+        <div class="card-icon">✅</div>
+        <h3>Approve &amp; pay</h3>
+        <p>Happy with the work? Approve it and payment is released. Not happy? Request a free revision first.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TASK CATEGORIES ══ -->
+<section class="section co-dark-section">
+  <div class="container">
+    <div class="sec-hdr" data-reveal>
+      <div class="eyebrow">What teens can do</div>
+      <h2>Tasks across every category</h2>
+      <p style="max-width:520px;margin-top:10px">From creative content to data work — teens on Funngro are surprisingly multi-skilled.</p>
+    </div>
+    <div class="three-grid" style="margin-top:0">
+      {% for cat in task_categories %}
+      <div class="task-cat-card" data-reveal data-delay="{{ loop.index0 * 70 }}">
+        <div class="tcc-icon">{{ cat.icon }}</div>
+        <h3>{{ cat.name }}</h3>
+        <p>{{ cat.desc }}</p>
+        <div class="tcc-avg">Avg. {{ cat.avg_price }}/task</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRICING ══ -->
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="sec-hdr" data-reveal>
+      <div class="eyebrow">Pricing</div>
+      <h2>Simple, transparent pricing</h2>
+      <p style="margin-top:10px">No subscriptions. No setup fees. Pay only when you approve work.</p>
+    </div>
+    <div class="three-grid">
+      <div class="pricing-card" data-reveal data-delay="0">
+        <div class="pc-tier">Starter</div>
+        <div class="pc-price">Free</div>
+        <p class="pc-desc">Perfect for trying Funngro with your first task.</p>
+        <ul class="pc-features">
+          <li><span class="pc-check">✓</span> 1 active task at a time</li>
+          <li><span class="pc-check">✓</span> Up to 3 teen applicants</li>
+          <li><span class="pc-check">✓</span> 1 free revision</li>
+          <li><span class="pc-check">✓</span> Basic support</li>
+          <li><span class="pc-cross">✗</span> Priority matching</li>
+          <li><span class="pc-cross">✗</span> Dedicated manager</li>
+        </ul>
+        <a href="#contact-section" class="btn btn-ghost" style="width:100%;margin-top:20px;justify-content:center">Post Free Task</a>
+      </div>
+      <div class="pricing-card featured" data-reveal data-delay="120">
+        <div class="pc-pop">Most Popular</div>
+        <div class="pc-tier">Growth</div>
+        <div class="pc-price">₹999<sub>/month</sub></div>
+        <p class="pc-desc">For growing companies with recurring task needs.</p>
+        <ul class="pc-features">
+          <li><span class="pc-check">✓</span> 10 active tasks/month</li>
+          <li><span class="pc-check">✓</span> Unlimited applicants</li>
+          <li><span class="pc-check">✓</span> 3 free revisions/task</li>
+          <li><span class="pc-check">✓</span> Priority matching</li>
+          <li><span class="pc-check">✓</span> Priority support</li>
+          <li><span class="pc-cross">✗</span> Dedicated manager</li>
+        </ul>
+        <a href="#contact-section" class="btn btn-primary" style="width:100%;margin-top:20px;justify-content:center">Get Started</a>
+      </div>
+      <div class="pricing-card" data-reveal data-delay="240">
+        <div class="pc-tier">Enterprise</div>
+        <div class="pc-price">Custom</div>
+        <p class="pc-desc">For teams needing volume, SLAs, and dedicated management.</p>
+        <ul class="pc-features">
+          <li><span class="pc-check">✓</span> Unlimited tasks</li>
+          <li><span class="pc-check">✓</span> Custom talent pool</li>
+          <li><span class="pc-check">✓</span> Unlimited revisions</li>
+          <li><span class="pc-check">✓</span> Priority matching</li>
+          <li><span class="pc-check">✓</span> 24/7 support</li>
+          <li><span class="pc-check">✓</span> Dedicated manager</li>
+        </ul>
+        <a href="mailto:hello@funngro.com" class="btn btn-ghost" style="width:100%;margin-top:20px;justify-content:center">Talk to Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section class="section co-dark-section">
+  <div class="container">
+    <div class="sec-hdr" data-reveal>
+      <div class="eyebrow">What companies say</div>
+      <h2>Results speak for themselves</h2>
+    </div>
+    <div class="three-grid">
+      {% for t in testimonials %}
+      <div class="testi-card" data-reveal data-delay="{{ loop.index0 * 100 }}">
+        <p class="testi-quote">"{{ t.quote }}"</p>
+        <div class="testi-footer">
+          <div class="testi-av {{ t.color }}">{{ t.initial }}</div>
+          <div>
+            <span class="testi-name">{{ t.name }}</span>
+            <span class="testi-role">{{ t.role }}</span>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="section" id="faq">
+  <div class="container" style="max-width:740px">
+    <div class="sec-hdr" data-reveal>
+      <div class="eyebrow">FAQ</div>
+      <h2>Questions we get a lot</h2>
+    </div>
+    <div data-reveal>
+      {% for item in faqs %}
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          {{ item.q }}<span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><p>{{ item.a }}</p></div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_head %}
+<style>
+.em-green { color:var(--green); font-style:normal; }
+
+/* Hero */
+.co-hero {
+  min-height:100vh;
+  background:linear-gradient(160deg, var(--bg) 0%, #0a1a0e 60%, var(--bg2) 100%);
+  display:flex; align-items:center;
+  padding:130px 0 80px; position:relative; overflow:hidden;
+}
+.co-hero-bg { position:absolute; inset:0; pointer-events:none; }
+.co-blob { position:absolute; border-radius:50%; filter:blur(100px); opacity:0.18; animation:blob 12s ease-in-out infinite alternate; }
+.co-blob-1 { width:560px; height:560px; background:var(--green-mid); top:-120px; right:-100px; }
+.co-blob-2 { width:380px; height:380px; background:#0ea5e9; bottom:-60px; left:-80px; animation-delay:-6s; }
+.co-grid-overlay {
+  position:absolute; inset:0;
+  background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);
+  background-size:52px 52px;
+}
+.co-hero-inner { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; position:relative; z-index:1; }
+.co-hero-text { display:flex; flex-direction:column; gap:22px; }
+.hero-btns { display:flex; gap:12px; flex-wrap:wrap; }
+.hero-trust { display:flex; flex-wrap:wrap; gap:10px; }
+.trust-pill { font-size:0.78rem; font-weight:600; color:var(--text-muted); background:var(--surface); border:1px solid var(--border); padding:5px 12px; border-radius:var(--r-full); }
+
+/* Demo card */
+.co-hero-card { position:relative; display:flex; justify-content:center; }
+.demo-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--r-lg); padding:24px; width:100%; max-width:320px; box-shadow:var(--shadow-lg); animation:float 7s ease-in-out infinite; }
+.demo-card-top { display:flex; align-items:center; gap:10px; margin-bottom:18px; }
+.demo-av { width:40px; height:40px; border-radius:50%; background:linear-gradient(135deg,var(--green-mid),var(--green-dark)); color:#031a08; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:800; font-size:1rem; flex-shrink:0; }
+.demo-name { font-family:var(--font-display); font-weight:700; color:var(--white); font-size:0.9rem; }
+.demo-sub  { font-size:0.72rem; color:var(--text-muted); }
+.demo-progress-track { height:6px; background:var(--surface3); border-radius:10px; overflow:hidden; }
+.demo-progress-fill  { height:100%; background:var(--green-mid); border-radius:10px; }
+.demo-stats { display:flex; gap:14px; margin-top:16px; padding-top:14px; border-top:1px solid var(--border); }
+.demo-stats span { font-size:0.76rem; color:var(--text-muted); }
+.demo-float-card { position:absolute; bottom:-18px; left:-18px; background:var(--surface2); border:1px solid var(--border); border-radius:var(--r-md); padding:12px 16px; display:flex; align-items:center; gap:10px; box-shadow:var(--shadow-md); animation:float 7s ease-in-out infinite; animation-delay:-3.5s; }
+
+/* Dark section bg */
+.co-dark-section { background:var(--bg2); }
+.co-dark-section .sec-hdr p { color:var(--text-muted); }
+
+/* Shared layout helpers */
+.sec-hdr { max-width:560px; margin-bottom:56px; }
+.sec-hdr p { margin-top:10px; color:var(--text-muted); font-size:1rem; }
+.three-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+
+@media (max-width:900px) {
+  .co-hero-inner { grid-template-columns:1fr; }
+  .co-hero-card  { display:none; }
+  .three-grid    { grid-template-columns:1fr; }
+  .pricing-card.featured { transform:none; }
+}
+@media (max-width:600px) {
+  .hero-btns { flex-direction:column; }
+}
+</style>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+document.querySelectorAll('.faq-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-btn').setAttribute('aria-expanded','false'); });
+    if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+  });
+});
+</script>
+{% endblock %}

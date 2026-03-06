@@ -1,0 +1,332 @@
+{% extends "base.html" %}
+{% block title %}Earn Money as a Teen in India | Funngro for Teens{% endblock %}
+{% block meta_desc %}Funngro lets teens aged 13–19 earn real money completing micro-tasks for companies. Build your portfolio, develop skills, and get paid — all while in school.{% endblock %}
+{% block meta_keywords %}earn money as a teen, teen jobs India, micro tasks for students, part time work for teenagers, online jobs for teens{% endblock %}
+{% block og_title %}Funngro for Teens — Earn Real Money While Learning{% endblock %}
+{% block og_desc %}Complete micro-tasks for companies, earn money, and build your future.{% endblock %}
+{% block og_url %}/teens{% endblock %}
+{% block nav_teens %}active{% endblock %}
+
+{% block content %}
+
+<!-- ══ HERO ══ -->
+<section class="teen-hero" aria-label="Teens hero">
+  <div class="teen-hero-bg">
+    <div class="t-blob t-blob-1"></div>
+    <div class="t-blob t-blob-2"></div>
+    <div class="t-blob t-blob-3"></div>
+  </div>
+  <div class="container teen-hero-inner">
+    <div class="teen-hero-text">
+      <!-- <div class="chip chip-yellow" data-reveal>🚀 For Teens aged 13–19</div> -->
+      <h1 data-reveal data-delay="80">
+        Your skills are worth<br/><em class="em-yellow">real money.</em>
+      </h1>
+      <p data-reveal data-delay="160" style="font-size:1.08rem;max-width:480px;color:var(--text-body)">
+        Stop scrolling. Start earning. Complete bite-sized tasks for real companies, get paid straight to your account, and build a portfolio that impresses — all before graduation.
+      </p>
+      <div class="hero-btns" data-reveal data-delay="240">
+        <a href="#how" class="btn btn-ghost btn-lg">How It Works</a>
+        <a href="#contact-section" class="btn teen-btn-cta btn-lg">Join Free — Start Earning ↗</a>
+      </div>
+      <div class="teen-social-proof" data-reveal data-delay="320">
+        <div class="proof-avs">
+          <div class="proof-av" style="background:#FF6B6B">P</div>
+          <div class="proof-av" style="background:#FFD93D;color:#5a3e00">M</div>
+          <div class="proof-av" style="background:var(--green-mid);color:#031a08">S</div>
+          <div class="proof-av" style="background:#6C63FF">A</div>
+        </div>
+        <span style="font-size:0.83rem;color:var(--text-body)"><strong style="color:var(--white)">12,000+ teens</strong> already earning</span>
+      </div>
+    </div>
+
+    <div class="teen-hero-card" data-reveal data-delay="120">
+      <div class="earn-card">
+        <div class="earn-card-top">
+          <span style="font-family:var(--font-display);font-weight:700;color:var(--white);font-size:0.9rem">Your Earnings</span>
+          <span class="chip chip-green" style="font-size:0.62rem">This month</span>
+        </div>
+        <div class="earn-amount">₹ <span class="ec-counter" data-target="3240">0</span></div>
+        <div class="earn-bars">
+          <div class="eb" style="--h:40%"></div>
+          <div class="eb" style="--h:65%"></div>
+          <div class="eb" style="--h:45%"></div>
+          <div class="eb" style="--h:80%"></div>
+          <div class="eb" style="--h:55%"></div>
+          <div class="eb eb--hi" style="--h:90%"></div>
+        </div>
+        <div class="earn-approved">
+          <svg viewBox="0 0 16 16" fill="var(--green)" width="12"><path d="M13.4 4.2a.8.8 0 0 0-1.1 0L6.4 9.8 3.7 7.2a.8.8 0 0 0-1.1 1.1l3.2 3.2a.8.8 0 0 0 1.1 0l6.5-6.2a.8.8 0 0 0 0-1.1z"/></svg>
+          Task approved — ₹250 added!
+        </div>
+      </div>
+      <div class="earn-float ef-1">🏅 Top Earner</div>
+      <div class="earn-float ef-2">⭐ 4.9 Rating</div>
+      <div class="earn-float ef-3">🎯 15 tasks done</div>
+    </div>
+  </div>
+
+  <!-- Marquee -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      {% for cat in skill_categories %}<span>{{ cat.icon }} {{ cat.name }}</span>{% endfor %}
+      {% for cat in skill_categories %}<span>{{ cat.icon }} {{ cat.name }}</span>{% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHY FUNNGRO ══ -->
+<section class="section">
+  <div class="container">
+    <div class="sec-hdr" data-reveal>
+      <div class="eyebrow">Why Funngro</div>
+      <h2>More than pocket money.</h2>
+      <p style="margin-top:10px">Turn spare time into skills, income, and a real head start in life.</p>
+    </div>
+    <div class="two-three-grid">
+      <div class="why-card" data-reveal data-delay="0">
+        <div class="why-icon">💰</div>
+        <h3>Real earnings</h3>
+        <p>Tasks pay ₹100 to ₹1,000+. Money hits your account directly — no waiting, no catch.</p>
+      </div>
+      <div class="why-card" data-reveal data-delay="80">
+        <div class="why-icon">🧠</div>
+        <h3>Skill-building</h3>
+        <p>Every task teaches you something — writing, design, research. Build a real portfolio in school.</p>
+      </div>
+      <div class="why-card" data-reveal data-delay="160">
+        <div class="why-icon">⏱️</div>
+        <h3>Fits your schedule</h3>
+        <p>Tasks take 30 mins to 2 hours. Do them after school, on weekends, whenever you have time.</p>
+      </div>
+      <div class="why-card" data-reveal data-delay="240">
+        <div class="why-icon">🛡️</div>
+        <h3>Safe &amp; verified</h3>
+        <p>All companies are verified. Your personal details are never shared. Parents can track activity.</p>
+      </div>
+      <div class="why-card" data-reveal data-delay="320">
+        <div class="why-icon">🏆</div>
+        <h3>Get recognised</h3>
+        <p>Earn badges, level up your profile, and get featured. Top earners get bonus tasks.</p>
+      </div>
+      <div class="why-card" data-reveal data-delay="400">
+        <div class="why-icon">📄</div>
+        <h3>Real references</h3>
+        <p>Your Funngro profile is a shareable work history for future jobs or college applications.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HOW TO EARN ══ -->
+<section class="section teen-dark-section" id="how">
+  <div class="container">
+    <div class="sec-hdr" data-reveal>
+      <div class="eyebrow">How to earn</div>
+      <h2>From zero to first payment<br/>in under 24 hours</h2>
+    </div>
+    <div class="how-steps-list" style="max-width:640px">
+      {% for step in how_steps %}
+      <div class="how-step {% if loop.last %}last{% endif %}" data-reveal data-delay="{{ loop.index0 * 130 }}">
+        {% if not loop.last %}<div class="how-connector"></div>{% endif %}
+        <div class="how-num">{{ step.num }}</div>
+        <div class="how-content">
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.desc }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ══ SKILL CATEGORIES ══ -->
+<section class="section" id="skills">
+  <div class="container">
+    <div class="sec-hdr" data-reveal>
+      <div class="eyebrow">Task categories</div>
+      <h2>Find tasks you actually love doing</h2>
+    </div>
+    <div class="two-three-grid">
+      {% for cat in skill_categories %}
+      <div class="skill-card {{ cat.style }}" data-reveal data-delay="{{ loop.index0 * 70 }}">
+        <div class="sc-icon">{{ cat.icon }}</div>
+        <h3>{{ cat.name }}</h3>
+        <p>{{ cat.desc }}</p>
+        <div class="sc-pay">{{ cat.pay_range }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ══ TEEN STORIES ══ -->
+<section class="section teen-dark-section">
+  <div class="container">
+    <div class="sec-hdr" data-reveal>
+      <div class="eyebrow">Real teens. Real earnings.</div>
+      <h2>Teens like you are already winning</h2>
+    </div>
+    <div class="three-grid">
+      {% for s in teen_stories %}
+      <div class="story-card" data-reveal data-delay="{{ loop.index0 * 120 }}">
+        <div class="story-top">
+          <div class="story-av" style="background:{{ s.gradient }}">{{ s.initial }}</div>
+          <div>
+            <div class="story-name">{{ s.name }}, {{ s.age }}</div>
+            <div class="story-loc">📍 {{ s.city }} · {{ s.skill }}</div>
+          </div>
+          <div class="story-earned">{{ s.earned }} <span>earned</span></div>
+        </div>
+        <p class="story-quote">"{{ s.quote }}"</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <span class="chip chip-green">{{ s.tasks }} tasks</span>
+          <span class="chip chip-yellow">⭐ {{ s.rating }}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ══ PARENT SECTION ══ -->
+<section class="section">
+  <div class="container parent-grid">
+    <div data-reveal>
+      <div class="eyebrow">For Parents</div>
+      <h2>Safe, supervised,<br/>and genuinely valuable.</h2>
+      <p style="margin-top:14px;font-size:1rem;color:var(--text-body)">We know parents have questions. Funngro is designed with teen safety as the top priority.</p>
+      <ul class="parent-list">
+        <li><div class="parent-check">✓</div><div><strong style="color:var(--white)">Parental dashboard</strong><br/><span style="color:var(--text-muted);font-size:0.85rem">See exactly what tasks your teen takes on and how much they earn.</span></div></li>
+        <li><div class="parent-check">✓</div><div><strong style="color:var(--white)">Verified companies only</strong><br/><span style="color:var(--text-muted);font-size:0.85rem">Every business is vetted before posting tasks. No anonymous employers.</span></div></li>
+        <li><div class="parent-check">✓</div><div><strong style="color:var(--white)">Age-appropriate tasks only</strong><br/><span style="color:var(--text-muted);font-size:0.85rem">Our algorithm filters tasks by age group. Under-16s see a restricted task set.</span></div></li>
+        <li><div class="parent-check">✓</div><div><strong style="color:var(--white)">No personal data shared</strong><br/><span style="color:var(--text-muted);font-size:0.85rem">Companies see your teen's profile, not their phone number or address.</span></div></li>
+      </ul>
+      <a href="#" class="btn btn-ghost btn-lg" style="margin-top:24px">Read Safety Policy</a>
+    </div>
+    <div class="parent-dash-card" data-reveal data-delay="150">
+      <div class="pd-head">
+        <span style="font-family:var(--font-display);font-weight:700;color:var(--white)">Parent Dashboard</span>
+        <span class="chip chip-green" style="font-size:0.65rem">Live</span>
+      </div>
+      <div class="pd-row"><span style="color:var(--text-muted);font-size:0.84rem">Total earned this month</span><span style="color:var(--green);font-weight:700">₹3,240</span></div>
+      <div class="pd-row"><span style="color:var(--text-muted);font-size:0.84rem">Active tasks</span><span style="color:var(--white);font-weight:600">2</span></div>
+      <div class="pd-row"><span style="color:var(--text-muted);font-size:0.84rem">Last activity</span><span style="color:var(--white);font-weight:600">2 hrs ago</span></div>
+      <div class="pd-row"><span style="color:var(--text-muted);font-size:0.84rem">Safety status</span><span style="color:var(--green);font-weight:600">All clear ✓</span></div>
+      <div class="pd-activity">
+        <div class="pd-item"><div class="pd-dot" style="background:var(--green)"></div><span>Priya submitted "Blog post draft"</span></div>
+        <div class="pd-item"><div class="pd-dot" style="background:var(--yellow)"></div><span>₹250 approved by TechStartup</span></div>
+        <div class="pd-item"><div class="pd-dot" style="background:var(--green)"></div><span>Applied: Canva graphics task</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_head %}
+<style>
+.em-yellow { color:var(--yellow); font-style:normal; }
+
+/* Hero */
+.teen-hero { background:linear-gradient(160deg,var(--bg) 0%,#0d1a0a 55%,var(--bg2) 100%); min-height:100vh; position:relative; overflow:hidden; padding:130px 0 0; }
+.teen-hero-bg { position:absolute; inset:0; pointer-events:none; }
+.t-blob { position:absolute; border-radius:50%; filter:blur(100px); opacity:0.16; animation:blob 14s ease-in-out infinite alternate; }
+.t-blob-1 { width:550px; height:550px; background:var(--green-mid); top:-80px; right:-120px; }
+.t-blob-2 { width:320px; height:320px; background:var(--yellow); bottom:80px; left:-60px; animation-delay:-5s; }
+.t-blob-3 { width:280px; height:280px; background:#7c3aed; top:45%; left:38%; animation-delay:-9s; }
+.teen-hero-inner { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; position:relative; z-index:1; }
+.teen-hero-text { display:flex; flex-direction:column; gap:22px; }
+.hero-btns { display:flex; gap:12px; flex-wrap:wrap; }
+.teen-btn-cta { background:var(--yellow); color:#1a0f00; box-shadow:0 4px 24px rgba(255,215,64,0.3); }
+.teen-btn-cta:hover { background:#ffe04d; box-shadow:0 8px 36px rgba(255,215,64,0.45); }
+.teen-social-proof { display:flex; align-items:center; gap:10px; }
+.proof-avs { display:flex; }
+.proof-av { width:30px; height:30px; border-radius:50%; margin-left:-8px; border:2px solid var(--bg); display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:700; font-size:0.75rem; color:white; }
+.proof-av:first-child { margin-left:0; }
+
+/* Earnings card */
+.teen-hero-card { position:relative; display:flex; justify-content:center; }
+.earn-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--r-lg); padding:24px; width:100%; max-width:290px; box-shadow:var(--shadow-lg); animation:float 7s ease-in-out infinite; }
+.earn-card-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+.earn-amount { font-family:var(--font-display); font-size:2.2rem; font-weight:800; color:var(--white); line-height:1; margin-bottom:18px; letter-spacing:-0.02em; }
+.earn-bars { display:flex; align-items:flex-end; gap:5px; height:52px; margin-bottom:12px; }
+.eb { flex:1; border-radius:3px 3px 0 0; background:var(--surface3); height:var(--h); }
+.eb--hi { background:var(--green-mid); }
+.earn-approved { display:flex; align-items:center; gap:6px; background:var(--green-dim); border-radius:7px; padding:7px 10px; font-size:0.75rem; font-weight:600; color:var(--green); border:1px solid rgba(0,230,118,0.15); }
+.earn-float { position:absolute; background:var(--surface2); border:1px solid var(--border); border-radius:var(--r-full); padding:7px 14px; font-size:0.75rem; font-weight:700; color:var(--white); box-shadow:var(--shadow-sm); white-space:nowrap; }
+.ef-1 { top:-8px; left:-12px; animation:float 8s ease-in-out infinite; }
+.ef-2 { bottom:50px; left:-20px; animation:float 9s ease-in-out infinite; animation-delay:-3s; }
+.ef-3 { bottom:-8px; right:-8px; animation:float 7s ease-in-out infinite; animation-delay:-5s; }
+
+/* Marquee */
+.marquee-strip { margin-top:80px; overflow:hidden; border-top:1px solid var(--border); background:rgba(255,255,255,0.02); padding:16px 0; }
+.marquee-track { display:flex; gap:44px; width:max-content; animation:marquee 24s linear infinite; }
+.marquee-track span { white-space:nowrap; font-size:0.85rem; font-weight:500; color:var(--text-muted); letter-spacing:0.04em; }
+
+/* Layout helpers */
+.sec-hdr { max-width:560px; margin-bottom:56px; }
+.sec-hdr p { color:var(--text-muted); }
+.two-three-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.three-grid     { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+.teen-dark-section { background:var(--bg2); }
+
+/* How steps */
+.how-steps-list { display:flex; flex-direction:column; gap:0; }
+.how-step { display:flex; gap:22px; align-items:flex-start; padding-bottom:36px; position:relative; }
+.how-step.last { padding-bottom:0; }
+.how-connector { position:absolute; left:20px; top:46px; bottom:0; width:2px; background:linear-gradient(to bottom,rgba(0,200,83,0.3),transparent); }
+.how-num { width:42px; height:42px; border-radius:50%; flex-shrink:0; background:var(--green-mid); color:#031a08; font-family:var(--font-display); font-weight:800; font-size:1rem; display:flex; align-items:center; justify-content:center; position:relative; z-index:1; box-shadow:0 0 0 7px rgba(0,200,83,0.1); }
+.how-content { padding-top:8px; }
+.how-content h3 { color:var(--white); margin-bottom:8px; }
+.how-content p  { color:var(--text-body); font-size:0.9rem; }
+
+/* Story card extras */
+.story-top { display:flex; align-items:center; gap:12px; margin-bottom:14px; }
+.story-av  { width:42px; height:42px; border-radius:50%; color:white; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:800; font-size:1rem; flex-shrink:0; }
+.story-loc { font-size:0.73rem; color:var(--text-muted); margin-top:2px; }
+
+/* Parent section */
+.parent-grid { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center; }
+.parent-list { display:flex; flex-direction:column; gap:16px; margin-top:28px; }
+.parent-list li { display:flex; gap:13px; align-items:flex-start; }
+.parent-check { width:24px; height:24px; border-radius:50%; background:var(--green-dim); border:1px solid rgba(0,230,118,0.2); color:var(--green); display:flex; align-items:center; justify-content:center; font-size:0.7rem; font-weight:800; flex-shrink:0; margin-top:2px; }
+.parent-dash-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--r-lg); padding:26px; box-shadow:var(--shadow-lg); }
+.pd-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; padding-bottom:14px; border-bottom:1px solid var(--border); }
+.pd-row  { display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.04); }
+.pd-activity { margin-top:16px; display:flex; flex-direction:column; gap:10px; }
+.pd-item { display:flex; align-items:center; gap:9px; font-size:0.78rem; color:var(--text-muted); }
+.pd-dot  { width:7px; height:7px; border-radius:50%; flex-shrink:0; }
+
+@media (max-width:900px) {
+  .teen-hero-inner { grid-template-columns:1fr; }
+  .teen-hero-card  { display:none; }
+  .two-three-grid,.three-grid { grid-template-columns:1fr 1fr; }
+  .parent-grid { grid-template-columns:1fr; }
+  .parent-dash-card { display:none; }
+}
+@media (max-width:600px) {
+  .two-three-grid,.three-grid { grid-template-columns:1fr; }
+  .hero-btns { flex-direction:column; }
+}
+</style>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+// Animated counter
+function animateCounter(el) {
+  const target = +el.dataset.target, dur = 1800, start = performance.now();
+  const tick = (now) => {
+    const p = Math.min((now - start) / dur, 1);
+    const e = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(e * target).toLocaleString('en-IN');
+    if (p < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+}
+new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { animateCounter(e.target); } });
+}, { threshold: 0.5 }).observe(document.querySelector('.ec-counter'));
+</script>
+{% endblock %}

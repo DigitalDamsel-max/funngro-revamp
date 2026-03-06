@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="index, follow"/>
+  <title>{% block title %}Funngro — Where Teens Earn & Companies Grow{% endblock %}</title>
+  <meta name="description" content="{% block meta_desc %}Funngro connects ambitious teens with real companies for paid micro-tasks. Earn, learn, and grow.{% endblock %}"/>
+  <meta name="keywords"    content="{% block meta_keywords %}teen jobs, micro tasks, earn money as a teen, hire teens{% endblock %}"/>
+  <meta property="og:title"       content="{% block og_title %}Funngro{% endblock %}"/>
+  <meta property="og:description" content="{% block og_desc %}Connecting teen talent with company needs.{% endblock %}"/>
+  <meta property="og:type"        content="website"/>
+  <meta property="og:url"         content="https://funngro.com{% block og_url %}/{% endblock %}"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+<!-- ═══════════════════════════════
+     NAVBAR — floating pill style
+     ═══════════════════════════════ -->
+<header class="site-header" id="siteHeader">
+  <div class="nav-inner">
+    <nav class="navbar" aria-label="Main navigation">
+
+      <!-- Logo -->
+      <a href="/" class="nav-logo" aria-label="Funngro home">Funn<span>gro</span></a>
+
+      <!-- Centre links -->
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="/company" class="nav-link {% block nav_company %}{% endblock %}">For Companies</a></li>
+        <li><a href="/teens"   class="nav-link {% block nav_teens   %}{% endblock %}">For Teens</a></li>
+        <li><a href="#contact-section" class="nav-link">Contact</a></li>
+        <!-- Mobile-only CTAs inside drawer -->
+        <!-- <li class="mobile-cta-row">
+          <a href="/teens"   class="nav-btn-ghost">Join as Teen</a>
+          <a href="/company" class="nav-btn-cta">Post a Task</a>
+        </li> -->
+      </ul>
+
+      <!-- Desktop CTAs -->
+      <div class="nav-actions">
+        <a href="/teens"   class="nav-btn-ghost">Join as Teen</a>
+        <a href="/company" class="nav-btn-cta">Post a Task ↗</a>
+      </div>
+
+      <!-- Hamburger -->
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+    </nav>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+
+<!-- ═══════════════════════════════
+     PAGE CONTENT
+     ═══════════════════════════════ -->
+<main id="main-content">
+  {% block content %}{% endblock %}
+</main>
+
+
+<!-- ═══════════════════════════════
+     CONTACT SECTION
+     ═══════════════════════════════ -->
+<section class="contact-section" id="contact-section" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Left: info -->
+      <div class="contact-info" data-reveal>
+        <div class="eyebrow">Get in Touch</div>
+        <h2 id="contact-heading">Let's build something great together.</h2>
+        <p>Whether you're a company looking to delegate, or a teen ready to start earning — we'd love to hear from you. Drop us a message and we'll get back within one business day.</p>
+
+        <div class="contact-trust">
+          <div class="cti">
+            <div class="cti-icon">⚡</div>
+            <div>
+              <strong>Fast response</strong>
+              <span>We reply within 24 hours on business days</span>
+            </div>
+          </div>
+          <div class="cti">
+            <div class="cti-icon">🔒</div>
+            <div>
+              <strong>Private & secure</strong>
+              <span>Your details are never shared with third parties</span>
+            </div>
+          </div>
+          <div class="cti">
+            <div class="cti-icon">🎯</div>
+            <div>
+              <strong>Tailored help</strong>
+              <span>We match your message to the right person on our team</span>
+            </div>
+          </div>
+          <div class="cti" style="margin-top:8px; background:transparent; border-color:transparent; padding-left:0;">
+            <div style="font-size:0.875rem; color:var(--text-muted);">
+              Or email us directly at&nbsp;
+              <a href="mailto:hello@funngro.com" style="color:var(--green); font-weight:600;">hello@funngro.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="contact-form-card" data-reveal data-delay="150">
+        <h3>Send us a message</h3>
+        <p>Fill in the form and we'll be in touch soon.</p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cf-name">Your name</label>
+            <input type="text" id="cf-name" class="form-input" placeholder="Alex Johnson" autocomplete="name"/>
+          </div>
+          <div class="form-group">
+            <label for="cf-email">Email address</label>
+            <input type="email" id="cf-email" class="form-input" placeholder="alex@company.com" autocomplete="email"/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="cf-type">I am a…</label>
+          <select id="cf-type" class="form-input" style="cursor:pointer">
+            <option value="company">Company looking to post tasks</option>
+            <option value="teens">Teen looking to earn</option>
+            <option value="parent">Parent with questions</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="cf-msg">Message</label>
+          <textarea id="cf-msg" class="form-textarea" placeholder="Tell us what you need…"></textarea>
+        </div>
+
+        <button class="form-submit" id="cf-submit" onclick="handleContactForm()">
+          Send Message →
+        </button>
+        <div class="form-msg" id="cf-msg-feedback"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     FOOTER
+     ═══════════════════════════════ -->
+<footer class="site-footer" id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo">Funn<span>gro</span></a>
+        <p>The smartest way for teens to earn and companies to grow — powered by real skills, real tasks, real results.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter / X">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/company">How It Works</a></li>
+          <li><a href="/company#pricing">Pricing</a></li>
+          <li><a href="/company#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Teens</h4>
+        <ul>
+          <li><a href="/teens">Get Started</a></li>
+          <li><a href="/teens#how">How to Earn</a></li>
+          <li><a href="/teens#skills">Skill Categories</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@funngro.com">hello@funngro.com</a></li>
+          <li><a href="#">Support Center</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Funngro. All rights reserved.</p>
+      <p>Made with ♥ for the next generation</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast -->
+<div class="toast" id="globalToast">
+  <div class="toast-dot"></div>
+  <span id="toastMsg"></span>
+</div>
+
+<script>
+/* ── Sticky header ── */
+const hdr = document.getElementById('siteHeader');
+window.addEventListener('scroll', () => hdr.classList.toggle('scrolled', scrollY > 20), { passive:true });
+
+/* ── Mobile nav ── */
+const toggle  = document.getElementById('navToggle');
+const navEl   = document.getElementById('navLinks');
+const overlay = document.getElementById('navOverlay');
+const openNav  = () => { navEl.classList.add('open'); overlay.classList.add('active'); toggle.classList.add('open'); toggle.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; };
+const closeNav = () => { navEl.classList.remove('open'); overlay.classList.remove('active'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.body.style.overflow=''; };
+toggle.addEventListener('click', () => navEl.classList.contains('open') ? closeNav() : openNav());
+overlay.addEventListener('click', closeNav);
+navEl.querySelectorAll('.nav-link').forEach(a => a.addEventListener('click', closeNav));
+
+/* ── Scroll reveal ── */
+const rObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    setTimeout(() => e.target.classList.add('revealed'), +(e.target.dataset.delay || 0));
+    rObs.unobserve(e.target);
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('[data-reveal]').forEach(el => rObs.observe(el));
+
+/* ── Toast ── */
+function showToast(msg, ok = true) {
+  const t = document.getElementById('globalToast');
+  document.getElementById('toastMsg').textContent = msg;
+  t.style.borderColor = ok ? 'rgba(0,230,118,0.25)' : 'rgba(255,110,110,0.25)';
+  t.querySelector('.toast-dot').style.background = ok ? 'var(--green)' : 'var(--coral)';
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 4500);
+}
+
+/* ── Contact form ── */
+async function handleContactForm() {
+  const name    = document.getElementById('cf-name').value.trim();
+  const email   = document.getElementById('cf-email').value.trim();
+  const source  = document.getElementById('cf-type').value;
+  const message = document.getElementById('cf-msg').value.trim();
+  const btn     = document.getElementById('cf-submit');
+  const msgEl   = document.getElementById('cf-msg-feedback');
+
+  btn.disabled = true; btn.textContent = 'Sending…';
+  try {
+    const res  = await fetch('/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, message, source })
+    });
+    const data = await res.json();
+    if (data.success) {
+      msgEl.className = 'form-msg success';
+      msgEl.textContent = data.message;
+      showToast(data.message);
+      ['cf-name','cf-email','cf-msg'].forEach(id => document.getElementById(id).value = '');
+    } else {
+      const errs = Object.values(data.errors || {}).join(' · ') || 'Please check your details.';
+      msgEl.className = 'form-msg error';
+      msgEl.textContent = errs;
+      showToast(errs, false);
+    }
+  } catch {
+    msgEl.className = 'form-msg error';
+    msgEl.textContent = 'Network error — please try again.';
+    showToast('Network error — please try again.', false);
+  } finally {
+    btn.disabled = false; btn.textContent = 'Send Message →';
+  }
+}
+
+/* ── Shared submitForm helper (used by page scripts) ── */
+async function submitForm({ name, email, message = '', source, btnEl, msgEl }) {
+  if (btnEl) { btnEl.disabled = true; btnEl.textContent = 'Sending…'; }
+  try {
+    const res  = await fetch('/contact', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ name, email, message, source }) });
+    const data = await res.json();
+    if (data.success) {
+      showToast(data.message);
+      if (msgEl) { msgEl.className = 'form-msg success'; msgEl.textContent = data.message; }
+      return true;
+    }
+    const errs = Object.values(data.errors || {}).join(' · ') || 'Please check your details.';
+    if (msgEl) { msgEl.className = 'form-msg error'; msgEl.textContent = errs; }
+    showToast(errs, false);
+    return false;
+  } catch {
+    const err = 'Network error — please try again.';
+    if (msgEl) { msgEl.className = 'form-msg error'; msgEl.textContent = err; }
+    showToast(err, false);
+    return false;
+  } finally {
+    if (btnEl) { btnEl.disabled = false; btnEl.textContent = 'Send Message →'; }
+  }
+}
+</script>
+
+{% block extra_scripts %}{% endblock %}
+</body>
+</html>
